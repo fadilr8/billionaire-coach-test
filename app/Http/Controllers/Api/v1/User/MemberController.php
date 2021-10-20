@@ -21,7 +21,7 @@ class MemberController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'email' => ['required', 'email'],
+            'email' => ['required', 'email', 'unique:members,email'],
             'phone' => 'required', 
         ]);
 
